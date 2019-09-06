@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>天气预报</title>
+      <link href="undefined2019/09/05/%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/"/>
+      <url>2019/09/05/%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 个人 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>嗝</title>
+      <link href="undefined2019/09/05/%E5%97%9D/"/>
+      <url>2019/09/05/%E5%97%9D/</url>
+      
+        <content type="html"><![CDATA[<h1 id="张飞-（三国时期蜀汉名将）"><a href="#张飞-（三国时期蜀汉名将）" class="headerlink" title="张飞 （三国时期蜀汉名将）"></a>张飞 （三国时期蜀汉名将）</h1><p>张飞（165年—221年），字益德（《华阳国志》作翼德），幽州涿郡（今河北涿州市）人，三国时期蜀汉名将。张飞勇武过人，与其兄关羽并称为“万人敌”。 [1]  关羽年长数岁，张飞兄事之。公元184年黄巾起义爆发，刘备在涿县组织起了一支义勇军参与扑灭黄巾军的战争，张飞与关羽一起加入，随刘备辗转各地。三人情同兄弟，寝则同床，刘备出席各种宴会时，和关羽终日侍立在刘备身旁。 [2]  公元196年因交恶曹豹而被吕布所破。吕布败亡之后，张飞被任命为中郎将。公元200年刘备衣带诏事情泄漏，率领关羽、张飞逃走，杀下邳太守车胄，刘备战败，关羽被擒，刘备与张飞投奔袁绍。公元208年刘备于长坂坡败退时，张飞仅率二十骑断后，曹军无人敢逼近，刘备因此得以免难。<br>刘备入蜀后，张飞与诸葛亮、赵云进军西川，分定郡县。在抵达江州时义释了刘璋手下的巴郡太守严颜。在巴西之战中，击败魏国名将张郃。在武都之战中，兵败而还。刘备称帝后，张飞晋升为车骑将军、领司隶校尉，封西乡侯。同年，张飞因为暴而无恩，被部将范强、张达杀害。谥曰桓侯。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 嗝嗝嗝 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 何永峰 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>何永锋</title>
+      <link href="undefined2019/09/05/%E4%BD%95%E6%B0%B8%E9%94%8B/"/>
+      <url>2019/09/05/%E4%BD%95%E6%B0%B8%E9%94%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="十万个为什么"><a href="#十万个为什么" class="headerlink" title="十万个为什么"></a>十万个为什么</h2><h3 id="什么是hexo"><a href="#什么是hexo" class="headerlink" title="什么是hexo"></a>什么是hexo</h3><p>度娘谷歌搜索。。。。。。。<br>度娘搜索node.js<br>由于换电脑，hexo需要移植，恰巧之前的域名到期了。不知道为什么狗爹没给我来邮件提示域名过期，超过一个月导致没法续费了。于是换回了hexo的默认域名。在折腾中遇到了几个新的问题。</p><p>一、DeprecationWarning: fs.SyncWriteStream is deprecated<br>问题：<br>node和hexo插件的版本带来的问题：在node8.x的版本中，fs.SyncWriteStream被弃用了。</p><p>解决：<br>更新如下插件：</p><p>npm install hexo-fs –save<br>npm install <a href="mailto:hexo-deployer-git@0.3.1" target="_blank" rel="noopener">hexo-deployer-git@0.3.1</a> –save<br>npm install <a href="mailto:hexo-renderer-ejs@0.3.1" target="_blank" rel="noopener">hexo-renderer-ejs@0.3.1</a> –save<br>npm install <a href="mailto:hexo-server@0.2.2" target="_blank" rel="noopener">hexo-server@0.2.2</a> –save<br>1<br>2<br>3<br>4<br>二、域名改为默认<br>1、删除source/CNAME文件。<br>2、修改hexo目录下_config.yml（不是theme下）的url ： <a href="http://liuyongshun.github.io" target="_blank" rel="noopener">http://liuyongshun.github.io</a><br>3、换个浏览器或清除缓存打开。</p><p>三、文件大小写导致hexo的404<br>1.git提交到github默认是不区分大小写的。<br>解决： 找到.deploy_git/.git/config打开，修改 ignorecase 为false 。ignorecase = false</p><p>2.github上原来有了小写的文件夹，又提交了大写的文件，想要删除小写的。<br>解决：</p><p>–cached会保留本地的不被删除。在.git 同级目录下启动git。执行如下命令（这会不用hexo的命令）。<br>1.git rm -r –cached cc/dd/zz<br>2.git commit -m “”<br>3.git push （可不加：origin master）<br>1<br>2<br>3<br>4<br>关于这里可以延伸解决另一个问题，就是有些时候你提交了没有的文件夹到github，例如.idea。即使后来你增加.gitignore,github上也会存在.idea。而当你想删除github上的.idea但不删除本地的.idea则同上操错</p><p>参考资料<br>————————————————<br>版权声明：本文为CSDN博主「liuyongshun2」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/liuyongshun2/article/details/79348016" target="_blank" rel="noopener">https://blog.csdn.net/liuyongshun2/article/details/79348016</a></p><h3 id="什么是node-js"><a href="#什么是node-js" class="headerlink" title="什么是node.js"></a>什么是node.js</h3><p>度娘搜索node.js<br>由于换电脑，hexo需要移植，恰巧之前的域名到期了。不知道为什么狗爹没给我来邮件提示域名过期，超过一个月导致没法续费了。于是换回了hexo的默认域名。在折腾中遇到了几个新的问题。</p><p>一、DeprecationWarning: fs.SyncWriteStream is deprecated<br>问题：<br>node和hexo插件的版本带来的问题：在node8.x的版本中，fs.SyncWriteStream被弃用了。</p><p>解决：<br>更新如下插件：</p><p>npm install hexo-fs –save<br>npm install <a href="mailto:hexo-deployer-git@0.3.1" target="_blank" rel="noopener">hexo-deployer-git@0.3.1</a> –save<br>npm install <a href="mailto:hexo-renderer-ejs@0.3.1" target="_blank" rel="noopener">hexo-renderer-ejs@0.3.1</a> –save<br>npm install <a href="mailto:hexo-server@0.2.2" target="_blank" rel="noopener">hexo-server@0.2.2</a> –save<br>1<br>2<br>3<br>4<br>二、域名改为默认<br>1、删除source/CNAME文件。<br>2、修改hexo目录下_config.yml（不是theme下）的url ： <a href="http://liuyongshun.github.io" target="_blank" rel="noopener">http://liuyongshun.github.io</a><br>3、换个浏览器或清除缓存打开。</p><p>三、文件大小写导致hexo的404<br>1.git提交到github默认是不区分大小写的。<br>解决： 找到.deploy_git/.git/config打开，修改 ignorecase 为false 。ignorecase = false</p><p>2.github上原来有了小写的文件夹，又提交了大写的文件，想要删除小写的。<br>解决：</p><p>–cached会保留本地的不被删除。在.git 同级目录下启动git。执行如下命令（这会不用hexo的命令）。<br>1.git rm -r –cached cc/dd/zz<br>2.git commit -m “”<br>3.git push （可不加：origin master）<br>1<br>2<br>3<br>4<br>关于这里可以延伸解决另一个问题，就是有些时候你提交了没有的文件夹到github，例如.idea。即使后来你增加.gitignore,github上也会存在.idea。而当你想删除github上的.idea但不删除本地的.idea则同上操错</p><p>参考资料<br>————————————————<br>版权声明：本文为CSDN博主「liuyongshun2」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/liuyongshun2/article/details/79348016" target="_blank" rel="noopener">https://blog.csdn.net/liuyongshun2/article/details/79348016</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 天气 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 天气预报 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>人生</title>
+      <link href="undefined2019/09/04/%E4%BA%BA%E7%94%9F/"/>
+      <url>2019/09/04/%E4%BA%BA%E7%94%9F/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>weise</title>
+      <link href="undefined2019/09/04/weise/"/>
+      <url>2019/09/04/weise/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 群众 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

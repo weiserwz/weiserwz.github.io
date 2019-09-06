@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/touch.png">
+    <link rel="icon" type="image/png" href="/img/favicon-load.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="这是一个博客网址">
+    <meta name="author" content="Wei Ze">
+    <meta name="keywords" content="Weize">
+    <title>何永锋 ~ Weiser</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="/lib/nprogress/nprogress.css?v=0.2.0">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+</head>
+
+
+<body>
+<header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/">&nbsp;<strong>weiser</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">主页</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">归档</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories/">分类</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/tags/">标签</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">关于</a>
+            </li>
+            
+            
+                <li class="nav-item" id="search-btn">
+                    <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+
+    <div class="view intro-2"
+         style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text wow fadeInUp">
+                    <span class="h2" id="subtitle">
+                        
+                    </span>
+                    
+                        <br>
+                        <p>星期四, 九月 5日 2019, 9:51 上午</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    
+        
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-lg-block col-lg-2"></div>
+            <div class="col-lg-8 nopadding-md">
+                <div class="py-5 z-depth-3 board">
+                    <div class="post-content mx-auto">
+                        <div class="markdown-body">
+                            <h2 id="十万个为什么"><a href="#十万个为什么" class="headerlink" title="十万个为什么"></a>十万个为什么</h2><h3 id="什么是hexo"><a href="#什么是hexo" class="headerlink" title="什么是hexo"></a>什么是hexo</h3><p>度娘谷歌搜索。。。。。。。<br>度娘搜索node.js<br>由于换电脑，hexo需要移植，恰巧之前的域名到期了。不知道为什么狗爹没给我来邮件提示域名过期，超过一个月导致没法续费了。于是换回了hexo的默认域名。在折腾中遇到了几个新的问题。</p>
+<p>一、DeprecationWarning: fs.SyncWriteStream is deprecated<br>问题：<br>node和hexo插件的版本带来的问题：在node8.x的版本中，fs.SyncWriteStream被弃用了。</p>
+<p>解决：<br>更新如下插件：</p>
+<p>npm install hexo-fs –save<br>npm install <a href="mailto:hexo-deployer-git@0.3.1" target="_blank" rel="noopener">hexo-deployer-git@0.3.1</a> –save<br>npm install <a href="mailto:hexo-renderer-ejs@0.3.1" target="_blank" rel="noopener">hexo-renderer-ejs@0.3.1</a> –save<br>npm install <a href="mailto:hexo-server@0.2.2" target="_blank" rel="noopener">hexo-server@0.2.2</a> –save<br>1<br>2<br>3<br>4<br>二、域名改为默认<br>1、删除source/CNAME文件。<br>2、修改hexo目录下_config.yml（不是theme下）的url ： <a href="http://liuyongshun.github.io" target="_blank" rel="noopener">http://liuyongshun.github.io</a><br>3、换个浏览器或清除缓存打开。</p>
+<p>三、文件大小写导致hexo的404<br>1.git提交到github默认是不区分大小写的。<br>解决： 找到.deploy_git/.git/config打开，修改 ignorecase 为false 。ignorecase = false</p>
+<p>2.github上原来有了小写的文件夹，又提交了大写的文件，想要删除小写的。<br>解决：</p>
+<p>–cached会保留本地的不被删除。在.git 同级目录下启动git。执行如下命令（这会不用hexo的命令）。<br>1.git rm -r –cached cc/dd/zz<br>2.git commit -m “”<br>3.git push （可不加：origin master）<br>1<br>2<br>3<br>4<br>关于这里可以延伸解决另一个问题，就是有些时候你提交了没有的文件夹到github，例如.idea。即使后来你增加.gitignore,github上也会存在.idea。而当你想删除github上的.idea但不删除本地的.idea则同上操错</p>
+<p>参考资料<br>————————————————<br>版权声明：本文为CSDN博主「liuyongshun2」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/liuyongshun2/article/details/79348016" target="_blank" rel="noopener">https://blog.csdn.net/liuyongshun2/article/details/79348016</a></p>
+<h3 id="什么是node-js"><a href="#什么是node-js" class="headerlink" title="什么是node.js"></a>什么是node.js</h3><p>度娘搜索node.js<br>由于换电脑，hexo需要移植，恰巧之前的域名到期了。不知道为什么狗爹没给我来邮件提示域名过期，超过一个月导致没法续费了。于是换回了hexo的默认域名。在折腾中遇到了几个新的问题。</p>
+<p>一、DeprecationWarning: fs.SyncWriteStream is deprecated<br>问题：<br>node和hexo插件的版本带来的问题：在node8.x的版本中，fs.SyncWriteStream被弃用了。</p>
+<p>解决：<br>更新如下插件：</p>
+<p>npm install hexo-fs –save<br>npm install <a href="mailto:hexo-deployer-git@0.3.1" target="_blank" rel="noopener">hexo-deployer-git@0.3.1</a> –save<br>npm install <a href="mailto:hexo-renderer-ejs@0.3.1" target="_blank" rel="noopener">hexo-renderer-ejs@0.3.1</a> –save<br>npm install <a href="mailto:hexo-server@0.2.2" target="_blank" rel="noopener">hexo-server@0.2.2</a> –save<br>1<br>2<br>3<br>4<br>二、域名改为默认<br>1、删除source/CNAME文件。<br>2、修改hexo目录下_config.yml（不是theme下）的url ： <a href="http://liuyongshun.github.io" target="_blank" rel="noopener">http://liuyongshun.github.io</a><br>3、换个浏览器或清除缓存打开。</p>
+<p>三、文件大小写导致hexo的404<br>1.git提交到github默认是不区分大小写的。<br>解决： 找到.deploy_git/.git/config打开，修改 ignorecase 为false 。ignorecase = false</p>
+<p>2.github上原来有了小写的文件夹，又提交了大写的文件，想要删除小写的。<br>解决：</p>
+<p>–cached会保留本地的不被删除。在.git 同级目录下启动git。执行如下命令（这会不用hexo的命令）。<br>1.git rm -r –cached cc/dd/zz<br>2.git commit -m “”<br>3.git push （可不加：origin master）<br>1<br>2<br>3<br>4<br>关于这里可以延伸解决另一个问题，就是有些时候你提交了没有的文件夹到github，例如.idea。即使后来你增加.gitignore,github上也会存在.idea。而当你想删除github上的.idea但不删除本地的.idea则同上操错</p>
+<p>参考资料<br>————————————————<br>版权声明：本文为CSDN博主「liuyongshun2」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/liuyongshun2/article/details/79348016" target="_blank" rel="noopener">https://blog.csdn.net/liuyongshun2/article/details/79348016</a></p>
+
+                            <hr>
+                        </div>
+                        <br>
+                        <div>
+                            
+                                <p>
+                                    <i class="iconfont icon-inbox"></i>
+                                    
+                                        <a class="hover-with-bg" href="/categories/%E5%A4%A9%E6%B0%94">天气</a>
+                                        &nbsp;
+                                    
+                                </p>
+                            
+                            <p>
+                                <i class="iconfont icon-tag"></i>
+                                
+                                    <a class="hover-with-bg" href="/tags/%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">天气预报</a>
+                                
+                            </p>
+                            
+                                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="d-none d-lg-block col-lg-2 toc-container">
+            
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container comments mx-auto" id="comments">
+        
+    </div>
+</div>
+
+    
+</main>
+
+
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="mt-5">
+    <div class="text-center py-3">
+        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+        <i class="iconfont icon-love"></i>
+        <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+        <br>
+        
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+<script src="/lib/mdbootstrap/js/popper.min.js"></script>
+<script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+<script src="/lib/nprogress/nprogress.min.js?v=0.2.0"></script>
+<script src="/js/main.js"></script>
+
+    
+        <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+
+
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+        $(document).ready(function () {
+            $('pre').addClass('prettyprint linenums');
+            prettyPrint();
+        })
+    </script>
+
+
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+            strings: [
+                '  ',
+                "何永锋&nbsp;",
+            ],
+            cursorChar: "_",
+            typeSpeed: 70,
+            loop: false,
+        });
+        typed.stop();
+        $(document).ready(function () {
+            $(".typed-cursor").addClass("h2");
+            typed.start();
+        });
+    </script>
+
+
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+        anchors.options = {
+            placement: "right",
+            visible: "false",
+            
+        };
+        var el = "h1,h2,h3,h4,h5,h6".split(",")
+        var res = []
+        for (item of el) {
+            res.push(".markdown-body > " + item)
+        }
+        anchors.add(res.join(", "))
+    </script>
+
+
+
+    <script src="/js/local-search.js"></script>
+    <script>
+        var path = "/local-search.xml";
+        var inputArea = document.querySelector("#local-search-input");
+        inputArea.onclick = function () {
+            getSearchFile(path);
+            this.onclick = null
+        }
+    </script>
+
+</body>
+</html>
